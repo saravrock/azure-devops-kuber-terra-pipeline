@@ -9,6 +9,11 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+#Pipelines > Stages > Jobs > Tasks (steps)
+
+jobs:
+-job: Job1
+
 steps:
 - script: echo Hello, world! changed
   displayName: 'Run a one-line script'
