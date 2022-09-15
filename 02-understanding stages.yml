@@ -2,11 +2,11 @@ trigger:
 - master
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: 'ubuntu-latest'
 
 stages:
--stage: Build
- jobs:
+- stage: Build
+  jobs:
   - job: FirstJob
     steps:
     - bash: echo Build FirstJob
@@ -14,17 +14,17 @@ stages:
     steps:
     - bash: echo Build SecondJob
 - stage: DevDeploy
- jobs:
+  jobs:
   - job: DevDeployJob
     steps:
     - bash: echo DevDeployJob
 - stage: QADeploy
- jobs:
+  jobs:
   - job: QADeployJob
     steps:
     - bash: echo QADeployJob
 - stage: ProdDeploy
- jobs:
+  jobs:
   - job: ProdDeployJob
     steps:
     - bash: echo ProdDeployJob
