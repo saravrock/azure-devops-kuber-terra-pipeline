@@ -19,7 +19,7 @@ stages:
   jobs:
   - job: DevDeployJob
     steps:
-    - bash: echo DevDeployJob
+    - bash: echo $(environment)DevDeployJob
 - stage: QADeploy
   dependsOn: Build
   jobs:
